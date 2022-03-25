@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    // 1. Write a function called add7 that takes one number and returns that number + 7.
+    function add7(number) {
+      return output("add7", number + 7);      
+    } 
+
+    // 2. Write a function called multiply that takes 2 numbers and returns their product.
+    function multiply(a,b) {
+      return output("mutiply", a * b);
+    } 
+
+    // 3. Write a function called capitalize that takes a string and returns that string with only the first letter capitalized. 
+    // Make sure that it can take strings that are lowercase, UPPERCASE or BoTh. 
+    function capitalize(str) {
+      // Extract first letter and make it upper case
+      upper = str.charAt(0).toUpperCase();
+      // Slice remaining letter and make it lower case
+      lower = str.slice(1).toLowerCase();
+      const str2 = upper + lower;
+
+      return output("capitalize", str2);
+    }
+    
+    // 4. Write a function called lastLetter that takes a string and returns the very last letter of that string: 
+    function lastLetter(str) {
+      return output ("lastLetter", str.slice(-1))
+    }
+
+
+    // Combined functions
+    function output(func, value) {
+      const para = document.createElement('p');
+      document.body.appendChild(para);
+      para.textContent = `${func}: ${value}`;
+    }
+
+  </script>
+</body>
+</html>
